@@ -1,0 +1,12 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - /docuseal/main.log
+    fields:
+      service: docuseal
+
+
+output.logstash:
+
+  hosts: ['logstash:5044']

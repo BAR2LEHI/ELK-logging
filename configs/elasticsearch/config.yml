@@ -1,5 +1,21 @@
-cluster.name: 'elk'
+# ------------------------------------ Node ------------------------------------
+node.name: es-node01
+node.roles: [ master, data ]
+
+
+# ---------------------------------- Network -----------------------------------
 network.host: 0.0.0.0
+http.port: 9200
+
+
+# ---------------------------------- Cluster -----------------------------------
+cluster.name: 'elk'
+
+
+# ----------------------------------- Paths ------------------------------------
+path.data: /var/lib/elasticsearch
+path.logs: /var/log/elasticsearch
+
 
 xpack.security.enabled: true
 xpack.license.self_generated.type: basic
